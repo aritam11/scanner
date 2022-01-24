@@ -10,7 +10,7 @@ function App() {
     if(result)
     {
       setScan(result);
-
+      console.log(result);
     }
   }
   const handleError = (error) => {
@@ -22,6 +22,7 @@ function App() {
       <div className="scanner">
       <QrReader
       delay={300}
+      style={{width:'100%'}}
       onError={handleError}
       onScan={handleScan}
       />
