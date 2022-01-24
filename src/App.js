@@ -10,7 +10,6 @@ function App() {
     if(result)
     {
       setScan(result.uid);
-      print(result);
     }
   }
   const handleError = (error) => {
