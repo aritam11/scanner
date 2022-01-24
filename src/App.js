@@ -9,7 +9,7 @@ function App() {
   const handleScan = (result) => {
     if(result)
     {
-      setScan(result);
+      setScan(result.uid);
       print(result);
     }
   }
