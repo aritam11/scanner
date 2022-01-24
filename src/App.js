@@ -10,7 +10,7 @@ function App() {
     if(result)
     {
       setScan(result);
-      console.log(result);
+      print(result);
     }
   }
   const handleError = (error) => {
