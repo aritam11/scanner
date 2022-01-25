@@ -8,8 +8,11 @@ function App() {
   const [scan ,setScan] = useState("");
   const handleScan = (result) => {
     if(result)
-    {
-      setScan(result.uid);
+    { 
+      var XMLParser = require('react-xml-parser');
+      var xml = new XMLParser().parseFromString(result);
+      var value = xml.getElementsByTagName('PrintLetterBarcodeData');
+      setScan(value);
     }
   }
   const handleError = (error) => {
